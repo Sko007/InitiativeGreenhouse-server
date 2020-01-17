@@ -1,28 +1,26 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
+const User = require("../User/model")
 
 const Answers = db.define("answer", {
-  usage_kwh: {
+  kwh: {
     type: Sequelize.INTEGER,
     allowNull: true
   },
-  usage_gasoline: {
+  meat: {
     type: Sequelize.INTEGER,
     allowNull: true
   },
-  usage_beef: {
+  water: {
     type: Sequelize.INTEGER,
     allowNull: true
   },
-  usage_pork: {
-    type: Sequelize.INTEGER,
-    allowNull: true
-  },
-  usage_chicken: {
+  gasoline: {
     type: Sequelize.INTEGER,
     allowNull: true
   }
 });
 
 
-module.exports=Answers
+Answer.belongsTo(User)
+module.exports = Answers;
