@@ -22,5 +22,6 @@ const Answers = db.define("answer", {
 });
 
 
-Answer.belongsTo(User)
+Answers.belongsTo(User)
+
 module.exports = Answers;

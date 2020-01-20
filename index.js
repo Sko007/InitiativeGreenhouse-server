@@ -20,8 +20,8 @@ const averageRouter = require("./Average/router")
 
 app.use(Cors);
 app.use(jsonParser);
-app.use(paymentRouter)
 app.use(answerRouter);
+app.use(paymentRouter)
 app.use(co2calculationRouter);
 app.use(averageRouter)
 app.use(treeSpaceRouter);
